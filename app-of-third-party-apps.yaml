@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-third-party-apps
+spec:
+  destination:
+    name: in-cluster
+    namespace: argocd
+  source:
+    directory:
+      recurse: true
+    path: third-party-apps
+    repoURL: git@github.com:Sabryomaline/third-party-apps.git
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
