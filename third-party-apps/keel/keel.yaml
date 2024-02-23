@@ -12,9 +12,12 @@ spec:
     chart: keel
     targetRevision: '1.0.3'
     helm:
-      parameters:
-        - name: helmProvider.enabled
-          value: 'false'
+      releaseName: ingress-nginx
+      valueFiles:
+      - $values/third-party-apps/keel/values.yaml
+  - repoURL: git@github.com:Sabryomaline/thirdparty-apps.git
+    targetRevision: main
+    ref: values
   destination:
     namespace: keel
     name: in-cluster
