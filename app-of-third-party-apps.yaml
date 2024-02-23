@@ -10,7 +10,7 @@ spec:
     directory:
       recurse: true
     path: third-party-apps
-    repoURL: git@github.com:Sabryomaline/third-party-apps.git
+    repoURL: git@github.com:Sabryomaline/thirdparty-apps.git
     targetRevision: HEAD
   project: default
   syncPolicy:
