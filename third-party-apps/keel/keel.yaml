@@ -14,8 +14,7 @@ spec:
     helm:
       releaseName: ingress-nginx
       valueFiles:
-      - $values/third-party-apps/keel/values.yaml
-  - repoURL: git@github.com:Sabryomaline/thirdparty-apps.git
+      - values.yaml
     targetRevision: main
     ref: values
   destination:
