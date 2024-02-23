@@ -28,11 +28,11 @@ helmProvider:
   enabled: true
   # set to version "v3" for Helm v3
   version: "v3"
-  tillerNamespace: "kube-system"
+  # tillerNamespace: "kube-system"
   # optional Tiller address (if portforwarder tunnel doesn't work),
   # if you are using default configuration, setting it to
   # 'tiller-deploy:44134' is usually fine
-  tillerAddress: 'tiller-deploy:44134'
+  # tillerAddress: 'tiller-deploy:44134'
 #  helmDriver: ''
 #  helmDriverSqlConnectionString: ''
 
@@ -118,7 +118,7 @@ basicauth:
 # Keel service
 # Enable to receive webhooks from Docker registries
 service:
-  enabled: false
+  enabled: true
   type: LoadBalancer
   externalPort: 9300
   clusterIP: ""
