@@ -15,8 +15,6 @@ spec:
       releaseName: ingress-nginx
       valueFiles:
       - values.yaml
-    targetRevision: main
-    ref: values
   destination:
     namespace: keel
     name: in-cluster
